@@ -1,24 +1,23 @@
-#include "ft_print_number.h"
-#include "ft_print_comb2.h"
-#include "ft_print_comb.h"
-#include "ft_putnbr.h"
+#include "Header/j02.h"
 
-void	ft_print_comb();
-void	ft_print_comb2();
-void	ft_print_number();
-void	ft_putnbr();
-
-int		main(int argv, char** argc)
+int		main(int argc, char** argv)
 {
-	if(argv == 1)
-	{
+	int nb;
 
+	if(argc < 2)
+	{
+		ft_putstr("Add arguments...");
+
+		return (0);
 	}
-	//ft_print_number();
-	//ft_is_negative();
-	//ft_print_comb();
-	//ft_print_comb2();
-	ft_putnbr(1989);
+	else if(argc == 2)
+	{
+		nb = (int)argv[2];
+		ft_putnbr(nb);
+
+		return (0);
+	}
+	else ft_putstr("Too arguments !");
 
 	return 0;
 }
